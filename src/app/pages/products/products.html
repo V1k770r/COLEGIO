@@ -1,0 +1,14 @@
+<h1>Nuestras mejores motos</h1>
+<img src="/img/banner1.jpg" alt="Motos" />
+
+<section class="productos">
+  @for(producto of productos; track producto.id) {
+  <article class="producto">
+    <img [src]="producto.imagen" [alt]="producto.nombre" />
+    <h3>{{ producto.nombre }}</h3>
+    <p>{{ producto.descripcion }}</p>
+    <strong>{{ producto.precio }}</strong>
+    <button>Ver mas</button>
+  </article>
+  }
+</section>
